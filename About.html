@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Bimcode Poultry</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2e8b57;
+      color: white;
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+
+    .top-bar div {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .login-btn {
+      background-color: white;
+      color: #2e8b57;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: #d0f0c0;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-bottom: 2px solid #3cb371;
+    }
+
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #2e8b57;
+      object-fit: cover;
+    }
+
+    header h1 {
+      color: #2e8b57;
+      margin: 0;
+      text-align: center;
+      flex: 1;
+      font-size: 28px;
+    }
+
+    header .social-icons img {
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    header .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #e6f5e6;
+      padding: 12px 0;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #3cb371;
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    .about-wrapper {
+      background: linear-gradient(135deg, #2e8b57, #3cb371, #a8e6a3);
+      padding: 50px 20px;
+      min-height: 70vh;
+      color: white;
+      text-align: center;
+    }
+
+    .about-table {
+      width: 80%;
+      margin: 40px auto;
+      border-spacing: 0;
+    }
+
+    .about-table td {
+      width: 50%;
+      vertical-align: middle;
+      padding: 20px;
+    }
+
+    .logo-big {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+    }
+
+    .box {
+      width: 90%;
+      margin: auto;
+      background-color: rgba(255,255,255,0.2);
+      padding: 25px;
+      border-radius: 12px;
+      backdrop-filter: blur(3px);
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div>
+      <span>12 IFELANA, SOLOMADE ESTATE, IKORODU LAGOS</span>
+    </div>
+    <div>
+      <span>&#9993; oladeleidowu40@gmail.com</span>
+      <span>&#9742; +2348029958673</span>
+      <span>&#9742; +2349078397256</span>
+      <a href="form.html" class="login-btn">Login / Sign Up</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <img src="images/330c13ce-cd9e-4d3a-a5e3-d5a00a44a821.png" />
+    <h1>Bimcode Poultry</h1>
+    <div class="social-icons">
+      <img src="images/fb.jpg">
+      <img src="images/in.jpg">
+      <img src="images/vecteezy_x-twitter-icon-logo-symbol_53986348.png">
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <button onclick="location.href='home.html'">Home</button>
+    <button onclick="location.href='about.html'">About Us</button>
+    <button onclick="location.href='product.html'">Products</button>
+    <button onclick="location.href='partner.html'">Our Partners</button>
+    <button onclick="location.href='contact.html'">Contact Us</button>
+  </nav>
+
+  <!-- ABOUT CONTENT -->
+  <div class="about-wrapper">
+    <h2 style="font-size:32px;">About Bimcode Poultry</h2>
+    <p style="max-width:750px; margin:auto; font-size:18px;">
+      Bimcode Poultry is dedicated to providing the highest quality eggs with freshness,
+      cleanliness and safe handling from our farm to your table.
+    </p>
+
+    <table class="about-table">
+      <tr>
+        <!-- LOGO -->
+        <td>
+          <img src="images/330c13ce-cd9e-4d3a-a5e3-d5a00a44a821.png" class="logo-big">
+        </td>
+
+        <!-- MISSION / VISION / VALUES -->
+        <td>
+          <div class="box">
+            <h2>Our Mission</h2>
+            <p>To deliver clean, fresh and healthy eggs at affordable prices.</p>
+
+            <h2>Our Vision</h2>
+            <p>To become Nigeria’s most trusted poultry brand.</p>
+
+            <h2>Our Values</h2>
+            <p>Integrity • Quality • Cleanliness • Customer Focus • Reliability</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+</body>
+</html>

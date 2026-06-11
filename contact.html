@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Bimcode Poultry</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2e8b57;
+      color: white;
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+
+    .top-bar div {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .login-btn, .logout-btn {
+      background-color: white;
+      color: #2e8b57;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover, .logout-btn:hover {
+      background-color: #d0f0c0;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-bottom: 2px solid #3cb371;
+    }
+
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #2e8b57;
+      object-fit: cover;
+    }
+
+    header h1 {
+      color: #2e8b57;
+      margin: 0;
+      text-align: center;
+      flex: 1;
+      font-size: 28px;
+    }
+
+    header .social-icons img {
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    header .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Navigation buttons */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #e6f5e6;
+      padding: 12px 0;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #3cb371;
+      transform: scale(1.05);
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 60px 20px;
+      gap: 30px;
+      background: linear-gradient(135deg, #2e8b57, #3cb371, #a8e6a3);
+    }
+
+    .contact-info, .contact-form {
+      flex: 1;
+      min-width: 300px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .contact-info h2, .contact-form h2 {
+      color: #2e8b57;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .contact-info span {
+      font-weight: bold;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #2e8b57;
+      box-shadow: 0 0 5px #2e8b57;
+      outline: none;
+    }
+
+    .contact-form input[type="submit"] {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .contact-form input[type="submit"]:hover {
+      background-color: #3cb371;
+      transform: scale(1.03);
+    }
+
+    /* Success Message */
+    .success-message {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      display: none;
+      margin-top: 10px;
+    }
+
+    /* Google Map */
+    .map-container {
+      margin-top: 30px;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1f5d3a;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #7fff00;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media(max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div>
+      <span>12 IFELANA, SOLOMADE ESTATE, IKORODU LAGOS</span>
+    </div>
+    <div>
+      <span>&#9993; idowufiyinfoluwa15@gmail.com</span>
+      <span>&#9742; +2348029958673</span>
+      <span>&#9742; +2349078397256</span>
+      <button id="loginBtn" class="login-btn" onclick="window.location.href='form.html'">Login / Sign Up</button>
+      <button id="logoutBtn" class="logout-btn" style="display:none;">Logout</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <img src="images/330c13ce-cd9e-4d3a-a5e3-d5a00a44a821.png" alt="Bimcode Logo">
+    <h1>Bimcode Poultry</h1>
+    <div class="social-icons">
+      <img src="images/fb.jpg" alt="Facebook">
+      <img src="images/in.jpg" alt="Instagram">
+      <img src="images/vecteezy_x-twitter-icon-logo-symbol_53986348.png" alt="Twitter">
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <button onclick="location.href='home.html'">Home</button>
+    <button onclick="location.href='product.html'">Product</button>
+    <button onclick="location.href='partner.html'">Our Partners</button>
+    <button onclick="location.href='about.html'">About Us</button>
+    <button onclick="location.href='contact.html'">Contact Us</button>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <div class="contact-container">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p><span>Address:</span> 12 Ifelana, Solomade Estate, Ikorodu Lagos</p>
+      <p><span>Email:</span> idowufiyinfoluwa15@gmail.com</p>
+      <p><span>Phone:</span> +2348029958673, +2349078397256</p>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.813219211639!2d3.555500815145366!3d6.576527327747008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4145a6f5b17%3A0xabc123456789def!2s12%20IFELANA%2C%20Solomade%20Estate%2C%20Ikorodu%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form id="contactForm" action="send_message.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+      <div class="success-message" id="successMessage">Message sent successfully!</div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 <a href="home.html">Bimcode Poultry</a>. Providing quality eggs at affordable prices. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Login session handling
+    const loginBtn = document.getElementById('loginBtn');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if(currentUser){
+      loginBtn.style.display = 'none';
+      logoutBtn.style.display = 'inline-block';
+    }
+    logoutBtn.addEventListener('click', () => {
+      localStorage.removeItem('currentUser');
+      window.location.href = 'form.html';
+    });
+
+    // Show success message after form submission
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+      fetch('send_message.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        successMessage.style.display = 'block';
+        contactForm.reset();
+      })
+      .catch(error => {
+        alert('Error sending message.');
+        console.error(error);
+      });
+    });
+  </script>
+</body>
+</html>
